@@ -7,7 +7,7 @@ published: true
 # Projects
 
 
-## Memory
+## [Memory]({% link projects/memory/index.md %})
 
 memory...
 
