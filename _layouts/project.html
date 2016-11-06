@@ -2,12 +2,12 @@
 layout: default
 ---
 
-<h1>Project: {{ page.projectTitle | escape }}</h1>
+<h1>Project: {{ page.title | escape }}</h1>
 
-{% if page.projectRepo %}
-<a href="https://github.com/{{ page.projectRepo }}"><span class="icon icon--github">{% include icon-github.svg %}</span><span class="username">{{ page.projectRepo }}</span></a>
+{% if page.githubRepo %}
+<a href="https://github.com/{{ page.githubRepo }}"><span class="icon icon--github">{% include icon-github.svg %}</span><span class="username">{{ page.githubRepo }}</span></a>
 {% endif %}
 
 <article class="project">
-  {{ content }}
+  {{ page.description.data }}
 </article>
