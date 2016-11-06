@@ -1,17 +1,24 @@
 ---
 layout: page
-title: Projects2
+title: Projects
 permalink: /projects/
 published: true
 ---
-<h1>Project list</h1>
-<ul>
-  {% assign sorted = (site.projects | sort: 'updated') | reverse %}
-  {% for project in sorted %}
-  <li>
-    <a href="{{project.url}}">{{project.title}}</a>
-    <p>{{project.summary.data}}</p>
-    <a href="{{project.url}}"><img src="{{ project.bannerUrl }}"></a>
-  </li>
-  {% endfor %}
-</ul>
+{% assign sortedProjects = (site.projects | sort: 'updated') | reverse %}
+<div class="container-fluid">
+  <div class="row">
+    {% for project in sortedProjects %}
+    <div class="col-xs-12 col-sm-6 col-md-4">
+      <div class="media">
+        <!--<div class="media-left">-->
+          <!--<a href="{{project.url}}"><img class="media-object" style="max-width: 200px;" src="{{ project.bannerUrl }}" alt="{{project.title}}"></a>-->
+        <!--</div>-->
+        <div class="media-body">
+          <h4 class="media-heading"><a href="{{project.url}}">{{project.title}}</a></h4>
+          <p>{{project.summary.data}}</p>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
