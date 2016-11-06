@@ -6,11 +6,12 @@ published: true
 ---
 <h1>Project list</h1>
 <ul>
-    {% for project in site.projects %}
-    <li>
-        <a href="{{project.url}}">{{project.title}}</a>
-        <p>{{project.summary.data}}</p>
-        <a href="{{project.url}}"><img src="{{ project.bannerUrl }}"></a>
-    </li>
-    {% endfor %}
+  {% assign sorted = (site.projects | sort: 'updated') | reverse %}
+  {% for project in sorted %}
+  <li>
+    <a href="{{project.url}}">{{project.title}}</a>
+    <p>{{project.summary.data}}</p>
+    <a href="{{project.url}}"><img src="{{ project.bannerUrl }}"></a>
+  </li>
+  {% endfor %}
 </ul>
