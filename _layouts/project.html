@@ -3,7 +3,7 @@ layout: default
 ---
 
 <h1>Project: {{ page.title | escape }}</h1>
-
+<img src="{{ page.bannerUrl }}">
 {% if page.githubRepo %}
 <a href="https://github.com/{{ page.githubRepo }}"><span class="icon icon--github">{% include icon-github.svg %}</span><span class="username">{{ page.githubRepo }}</span></a>
 {% endif %}
