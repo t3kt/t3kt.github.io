@@ -31,13 +31,16 @@ tekt.flickr = (function ($) {
   function renderImages(images) {
     return images.map(function (image) {
       return $('<figure class="flickr-image col-xs-12 col-sm-6 col-md-4 col-lg-3"/>')
-        .append($('<img class="figure-img img-fluid rounded"/>').attr({'src': image.url_s}));
+        .append(
+          $('<a/>')
+            .attr({'href': image.url_o, 'target': '_blank'})
+            .append($('<img class="figure-img img-fluid rounded"/>').attr({'src': image.url_s})));
     });
   }
 
   function loadSetImages(setId, container) {
     getSetImages(setId)
-      .then(function(images) {
+      .then(function (images) {
         $(container).append(renderImages(images));
       })
   }
