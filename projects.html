@@ -8,14 +8,15 @@ published: true
 <div class="container-fluid">
   <div class="row">
     {% for project in sortedProjects %}
-    <div class="col-xs-12 col-sm-6 col-md-4">
-      <div class="media">
-        <!--<div class="media-left">-->
-          <!--<a href="{{project.url}}"><img class="media-object" style="max-width: 200px;" src="{{ project.bannerUrl }}" alt="{{project.title}}"></a>-->
-        <!--</div>-->
-        <div class="media-body">
-          <h4 class="media-heading"><a href="{{project.url}}">{{project.title}}</a></h4>
-          <p>{{project.summary.data}}</p>
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+      <div class="card project-card">
+        <div class="card-block">
+          <h4 class="card-title">{{project.title}}</h4>
+        </div>
+        <img src="{{ project.bannerUrl }}" alt="{{project.title}}">
+        <div class="card-block">
+          <p class="card-text">{{project.summary.data}}</p>
+          <a class="card-link" href="{{project.url}}">more...</a>
         </div>
       </div>
     </div>
