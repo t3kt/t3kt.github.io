@@ -12,3 +12,15 @@ layout: default
 <section class="project">
   {{ page.description.data }}
 </section>
+
+<section class="project-videos">
+</section>
+
+{% if page.vimeoAlbumId %}
+<script>
+  jQuery(function () {
+    var albumId = {{ page.vimeoAlbumId | jsonify }};
+    tekt.vimeo.addAlbum(albumId, $('.project-videos'));
+  })
+</script>
+{% endif %}
