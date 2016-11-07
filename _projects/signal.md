@@ -5,7 +5,7 @@ bannerUrl: https://c2.staticflickr.com/8/7464/27018692035_0967ef863b_o.jpg
 githubRepo: t3kt/signal
 vimeoAlbumId: '3949891'
 flickrSetId: '72157665085603784'
-title: signal
+title: Signal
 key: signal
 navItems:
 - url: https://github.com/t3kt/signal
@@ -15,7 +15,7 @@ updated: '2016-05-15T02:24:00.000Z'
 created: '2016-05-15T02:24:00.000Z'
 description:
   renderOptions: 
-  data: ''
+  data: "<p>Signal produces patterns from noise</p>"
 summary:
   renderOptions: 
   data: "<p>Signal produces patterns from noise</p>"

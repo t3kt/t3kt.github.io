@@ -1,0 +1,22 @@
+{% assign currentUrl = page.url | downcase | split: '/' %}
+<header class="navbar navbar-dark bg-inverse navbar-static-top">
+  <nav>
+    <a class="navbar-brand hidden-sm-up" href="/">
+      {{ site.title }}
+    </a>
+    <button class="navbar-toggler float-xs-right hidden-sm-up" type="button" data-toggle="collapse" data-target="#t-main-nav" aria-controls="t-main-nav" aria-expanded="false" aria-label="Toggle navigation"></button>
+    <div class="collapse navbar-toggleable-xs" id="t-main-nav">
+      <a class="navbar-brand" href="/">
+        {{ site.title }}
+      </a>
+      <ul class="nav navbar-nav">
+        <li {% if currentUrl[1] == 'projects' %} class="nav-item active" {% else %} class="nav-item" {% endif %}>
+        <a class="nav-item nav-link" href="/projects/">Projects</a>
+        </li>
+        <li {% if currentUrl[1] == 'about' %} class="nav-item active" {% else %} class="nav-item" {% endif %}>
+        <a class="nav-item nav-link " href="/about/">About</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>

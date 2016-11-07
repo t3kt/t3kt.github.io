@@ -1,7 +1,14 @@
 ---
 ---
 .project-card {
+  min-height: 32em;
+
   img {
     max-width: 100%;
   }
+}
+
+.project-heading {
+  background-repeat: no-repeat;
+  background-size: 100% auto;
 }

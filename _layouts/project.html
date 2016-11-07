@@ -2,12 +2,13 @@
 layout: default
 ---
 
-<h1>Project: {{ page.title | escape }}</h1>
-<img src="{{ page.bannerUrl }}">
+<header class="jumbotron project-heading" style="background-image: url('{{ page.bannerFullUrl }}');">
+  <h1 class="text-white"><small>project:</small> {{ page.title | escape }}</h1>
+</header>
 {% if page.githubRepo %}
 <a href="https://github.com/{{ page.githubRepo }}"><span class="icon icon--github">{% include icon-github.svg %}</span><span class="username">{{ page.githubRepo }}</span></a>
 {% endif %}
 
-<article class="project">
+<section class="project">
   {{ page.description.data }}
-</article>
+</section>
