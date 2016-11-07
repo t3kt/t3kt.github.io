@@ -2,6 +2,13 @@
 layout: default
 ---
 
+<script>
+  window.tekt = window.tekt || {};
+  tekt.project = {};
+  tekt.project.flickrSetId = {{ page.flickrSetId | jsonify }},
+  tekt.project.vimeoAlbumId = {{ page.vimeoAlbumId | jsonify }};
+</script>
+
 <header class="jumbotron project-heading" style="background-image: url('{{ page.bannerFullUrl }}');">
   <h1 class="text-white"><small>project:</small> {{ page.title | escape }}</h1>
 </header>
@@ -22,8 +29,7 @@ layout: default
 {% if page.vimeoAlbumId %}
 <script>
   jQuery(function () {
-    var albumId = {{ page.vimeoAlbumId | jsonify }};
-    tekt.vimeo.addAlbum(albumId, $('.project-videos'));
+    tekt.vimeo.addAlbum(tekt.project.vimeoAlbumId, $('.project-videos'));
   })
 </script>
 {% endif %}
@@ -31,8 +37,7 @@ layout: default
 {% if page.flickrSetId %}
 <script>
   jQuery(function () {
-    var setId = {{ page.flickrSetId | jsonify }};
-    tekt.flickr.loadSetImages(setId, $('.project-images'));
+    tekt.flickr.loadSetImages(tekt.project.flickrSetId, $('.project-images'));
   })
 </script>
 {% endif %}
