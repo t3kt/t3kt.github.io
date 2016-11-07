@@ -9,7 +9,7 @@ layout: default
   tekt.project.vimeoAlbumId = {{ page.vimeoAlbumId | jsonify }};
 </script>
 
-<header class="jumbotron project-heading" style="background-image: url('{{ page.bannerFullUrl }}');">
+<header class="jumbotron fixed-bg-fill" style="background-image: url('{{ page.bannerFullUrl }}');">
   <h1 class="text-white"><small>project:</small> {{ page.title | escape }}</h1>
 </header>
 {% if page.githubRepo %}

@@ -1,6 +1,6 @@
 ---
 layout: project
-bannerFullUrl: https://c2.staticflickr.com/6/5630/23433722450_98aa52b54f_h.jpg
+bannerFullUrl: https://c2.staticflickr.com/6/5630/23433722450_796ffb4022_h.jpg
 bannerUrl: https://c2.staticflickr.com/6/5774/23433718020_babfcf67da_o.jpg
 blogCategories: []
 created: '2015-12-13T20:36:32.000Z'

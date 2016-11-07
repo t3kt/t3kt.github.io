@@ -1,0 +1,21 @@
+---
+layout: default
+title: Projects
+permalink: /projects2/
+published: true
+---
+<h2>Projects</h2>
+{% assign sortedProjects = (site.projects | sort: 'updated') | reverse %}
+<div class="container">
+  {% for project in sortedProjects %}
+  <div class="w-100">
+    <div class="jumbotron fixed-bg-fill" style="background-image: url('{{ project.bannerFullUrl }}');">
+      <h1 class="text-white">{{ project.title | escape }}</h1>
+      <div class="lead text-white">
+      <p class="">{{ project.summary.data }}</p>
+      <a class="btn btn-primary btn-lg" href="{{ project.url }}" role="button">See more</a>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
