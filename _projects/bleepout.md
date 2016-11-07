@@ -37,4 +37,5 @@ summary:
 title: Bleepout
 updated: '2015-12-13T20:36:32.000Z'
 vimeoAlbumId: ''
+showcase: true
 ---

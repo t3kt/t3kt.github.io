@@ -25,4 +25,5 @@ summary:
   data: "<p>Vjzual is a video processing system for live performance</p>"
   dataType: html
 blogCategories: []
+showcase: true
 ---

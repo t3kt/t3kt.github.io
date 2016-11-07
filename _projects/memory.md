@@ -17,5 +17,5 @@ summary:
   renderOptions: 
   data: "<p>Memory represents the birth and death of meaning and information as the
     people that remember an event fade away.</p>"
-  dataType: html
+showcase: true
 ---

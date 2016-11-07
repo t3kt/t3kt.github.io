@@ -6,7 +6,20 @@ published: true
 ---
 <h2>Projects</h2>
 {% assign sortedProjects = (site.projects | sort: 'updated') | reverse %}
-<!--<div class="container">
+{% assign showcaseProjects = sortedProjects | where: 'showcase',true %}
+<div class="container">
+  {% for project in showcaseProjects %}
+  <div class="w-100">
+    <div class="jumbotron fixed-bg-fill" style="background-image: url('{{ project.bannerFullUrl }}');">
+      <h1 class="text-white">{{ project.title | escape }}</h1>
+      <div class="lead text-white bg-transparent-black p-1 rounded">
+        <p class="">{{ project.summary.data }}</p>
+        <a class="btn btn-primary btn-lg" href="{{ project.url }}" role="button">See more</a>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+  <hr/>
   {% for project in sortedProjects %}
   <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
     <div class="card project-card">
@@ -17,19 +30,6 @@ published: true
       <div class="card-block">
         <p class="card-text">{{ project.summary.data | truncate: 100 }}</p>
         <a class="card-link" href="{{project.url}}">more...</a>
-      </div>
-    </div>
-  </div>
-  {% endfor %}
-</div>-->
-<div class="container">
-  {% for project in sortedProjects %}
-  <div class="w-100">
-    <div class="jumbotron fixed-bg-fill" style="background-image: url('{{ project.bannerFullUrl }}');">
-      <h1 class="text-white">{{ project.title | escape }}</h1>
-      <div class="lead text-white bg-transparent-black p-1 rounded">
-        <p class="">{{ project.summary.data }}</p>
-        <a class="btn btn-primary btn-lg" href="{{ project.url }}" role="button">See more</a>
       </div>
     </div>
   </div>

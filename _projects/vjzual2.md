@@ -26,4 +26,5 @@ summary:
 title: vjzual2
 updated: '2015-10-24T23:19:00.000Z'
 vimeoAlbumId: '3594179'
+showcase: true
 ---

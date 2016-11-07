@@ -37,4 +37,5 @@ summary:
 title: Visualize Somerville
 updated: '2015-02-02T20:01:18.000Z'
 vimeoAlbumId: '3255104'
+showcase: true
 ---
