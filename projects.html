@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: Projects
 permalink: /projects/
 published: true
@@ -13,7 +13,7 @@ published: true
         <div class="card-block">
           <h4 class="card-title">{{project.title}}</h4>
         </div>
-        <img src="{{ project.bannerUrl }}" alt="{{project.title}}">
+        <a href="{{project.url}}"><img src="{{ project.bannerUrl }}" alt="{{project.title}}"></a>
         <div class="card-block">
           <p class="card-text">{{project.summary.data}}</p>
           <a class="card-link" href="{{project.url}}">more...</a>
