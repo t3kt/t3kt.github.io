@@ -7,4 +7,11 @@
   <link rel="stylesheet" href="{{ "/bootstrap-4.0.0-alpha.5-dist/css/bootstrap.css" | relative_url }}">
   <link rel="stylesheet" href="{{ "/css/site.css" | relative_url }}"/>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" crossorigin="anonymous"></script>
+  {% if page.bodyBackgroundImage %}
+  <style>
+    body {
+      background-image: url('{{ page.bodyBackgroundImage }}');
+    }
+  </style>
+  {% endif %}
 </head>
