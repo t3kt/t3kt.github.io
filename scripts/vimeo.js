@@ -25,8 +25,8 @@ tekt.vimeo = (function ($) {
       autopause: true,
       autoplay: false,
       player_id: '',
-      maxwidth: 300,
-      maxheight: 200
+      maxwidth: 400,
+      maxheight: 300
     }, params);
     return $.ajax(oembedUrl, {
       dataType: 'jsonp',
@@ -44,16 +44,17 @@ tekt.vimeo = (function ($) {
       .then(function (data) {
         placeholder
           .removeClass('video-placeholder')
+          .addClass('vimeo-video')
           .html(data.html);
         return data;
       });
   }
 
   function createVideoPlaceholder(video) {
-    return $('<span class="video-placeholder"/>')
+    return $('<span class="video-placeholder col-xs-12 col-sm-12 col-md-6 col-lg-4"/>')
       .attr('data-video-id', video.id)
       .attr({'data-video-id': video.id, 'data-video-url': video.url})
-      .append($('<img/>').attr('src', video.thumbnail_medium));
+      .append($('<img/>').attr('src', video.thumbnail_large));
   }
 
   function addAlbumPlaceholders(albumId, container) {

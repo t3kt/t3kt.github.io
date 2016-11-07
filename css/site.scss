@@ -13,3 +13,9 @@
   background-size: 100% auto;
   background-attachment: fixed;
 }
+
+.video-placeholder {
+  img {
+    max-width: 100%;
+  }
+}

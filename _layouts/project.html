@@ -16,11 +16,23 @@ layout: default
 <section class="project-videos">
 </section>
 
+<section class="project-images">
+</section>
+
 {% if page.vimeoAlbumId %}
 <script>
   jQuery(function () {
     var albumId = {{ page.vimeoAlbumId | jsonify }};
     tekt.vimeo.addAlbum(albumId, $('.project-videos'));
+  })
+</script>
+{% endif %}
+
+{% if page.flickrSetId %}
+<script>
+  jQuery(function () {
+    var setId = {{ page.flickrSetId | jsonify }};
+    tekt.flickr.loadSetImages(setId, $('.project-images'));
   })
 </script>
 {% endif %}
