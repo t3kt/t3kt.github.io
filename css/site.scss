@@ -8,6 +8,11 @@
   }
 }
 
+.project-card,
+.featured-project {
+  cursor: pointer;
+}
+
 .fixed-bg-fill {
   background-repeat: no-repeat;
   background-size: 100% auto;

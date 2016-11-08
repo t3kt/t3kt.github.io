@@ -7,10 +7,10 @@ published: true
 <h2>Projects</h2>
 {% assign sortedProjects = (site.projects | sort: 'updated') | reverse %}
 {% assign showcaseProjects = sortedProjects | where: 'showcase',true %}
-<div class="container">
+<div id="project-list" class="container">
   {% for project in showcaseProjects %}
   <div class="w-100">
-    <div class="jumbotron fixed-bg-fill" style="background-image: url('{{ project.bannerFullUrl }}');">
+    <div class="jumbotron featured-project fixed-bg-fill" style="background-image: url('{{ project.bannerFullUrl }}');">
       <h1 class="text-white">{{ project.title | escape }}</h1>
       <div class="lead text-white bg-transparent-black p-1 rounded">
         <p class="">{{ project.summary.data }}</p>
@@ -22,11 +22,11 @@ published: true
   <hr/>
   {% for project in sortedProjects %}
   <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
-    <div class="card project-card">
+    <div class="card project-card" data-url="{{ project.url }}">
       <div class="card-block">
         <h4 class="card-title">{{project.title}}</h4>
       </div>
-      <a href="{{project.url}}"><img src="{{ project.bannerUrl }}" alt="{{project.title}}"></a>
+      <a href="{{ project.url }}"><img src="{{ project.bannerUrl }}" alt="{{project.title}}"></a>
       <div class="card-block">
         <p class="card-text">{{ project.summary.data | truncate: 100 }}</p>
         <a class="card-link" href="{{project.url}}">more...</a>
@@ -35,3 +35,12 @@ published: true
   </div>
   {% endfor %}
 </div>
+<script>
+  $(function() {
+    $('#project-list').on('click', '.project-card, .featured-project', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      window.location.href = $('[href]', this).attr('href');
+    })
+  })
+</script>
