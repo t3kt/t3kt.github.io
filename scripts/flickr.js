@@ -30,11 +30,11 @@ tekt.flickr = (function ($) {
 
   function renderImages(images) {
     return images.map(function (image) {
-      return $('<figure class="flickr-image col-xs-12 col-sm-6 col-md-4 col-lg-3"/>')
-        .append(
-          $('<a/>')
-            .attr({'href': image.url_o, 'target': '_blank'})
-            .append($('<img class="figure-img img-fluid rounded"/>').attr({'src': image.url_s})));
+      var figure = tekt.shared.cloneTemplate('#image-template');
+      figure.find('.full-link').attr('href', image.url_o);
+      figure.find('img').attr('src', image.url_m);
+      figure.find('figcaption').text(image.title);
+      return figure;
     });
   }
 

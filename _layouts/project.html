@@ -36,6 +36,7 @@ layout: default
 {% endif %}
 
 {% if page.flickrSetId %}
+{% include image-template.html %}
 <script>
   jQuery(function () {
     tekt.flickr.loadSetImages(tekt.project.flickrSetId, $('.project-images'));
