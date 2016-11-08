@@ -20,7 +20,36 @@
 }
 
 .video-placeholder {
+  position: relative;
   img {
     max-width: 100%;
+  }
+  figcaption {
+    position: absolute;
+    top: 1em;
+    left: 1.5em;
+    color: #00adef;
+    max-width: 100%;
+    font-size: 1.1em;
+    font-weight: 700;
+    margin: 0;
+    padding: .1em .2em;
+    background: rgba(23,35,34,.75);
+    display: inline-block;
+  }
+  .play-icon {
+    position: absolute;
+    left: 1.5em;
+    bottom: 1em;
+    background-color: #333;
+    text-align: center;
+    padding: .2em .8em;
+    box-sizing: content-box;
+    border-radius: .2em;
+    svg {
+      height: 1.4em;
+      margin-top: .2em;
+      fill: #fff;
+    }
   }
 }

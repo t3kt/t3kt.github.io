@@ -55,6 +55,7 @@ tekt.vimeo = (function ($) {
     var placeholder = $('figure', document.importNode(template.content, true));
     placeholder.attr('data-video-url', video.url);
     placeholder.find('img').attr('src', video.thumbnail_large);
+    placeholder.find('figcaption').text(video.title);
     return placeholder;
   }
 
