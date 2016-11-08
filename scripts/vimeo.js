@@ -51,10 +51,11 @@ tekt.vimeo = (function ($) {
   }
 
   function createVideoPlaceholder(video) {
-    return $('<span class="video-placeholder col-xs-12 col-sm-12 col-md-6 col-lg-4"/>')
-      .attr('data-video-id', video.id)
-      .attr({'data-video-id': video.id, 'data-video-url': video.url})
-      .append($('<img/>').attr('src', video.thumbnail_large));
+    var template = document.getElementById('video-placeholder-template');
+    var placeholder = $('figure', document.importNode(template.content, true));
+    placeholder.attr('data-video-url', video.url);
+    placeholder.find('img').attr('src', video.thumbnail_large);
+    return placeholder;
   }
 
   function addAlbumPlaceholders(albumId, container) {

@@ -27,6 +27,7 @@ layout: default
 </section>
 
 {% if page.vimeoAlbumId %}
+{% include video-template.html %}
 <script>
   jQuery(function () {
     tekt.vimeo.addAlbum(tekt.project.vimeoAlbumId, $('.project-videos'));
