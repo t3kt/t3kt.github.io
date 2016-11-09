@@ -21,5 +21,5 @@ summary:
   data: "<p>Signal produces patterns from noise</p>"
   dataType: html
 blogCategories: []
-showcase: true
+featured: true
 ---

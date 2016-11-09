@@ -22,5 +22,5 @@ summary:
   data: "<p>Surface examines spatial deformation on simple surfaces.</p>"
   dataType: html
 blogCategories: []
-showcase: true
+featured: true
 ---

@@ -6,9 +6,9 @@ published: true
 ---
 <h2>Projects</h2>
 {% assign sortedProjects = (site.projects | sort: 'updated') | reverse %}
-{% assign showcaseProjects = sortedProjects | where: 'showcase',true %}
+{% assign featuredProjects = sortedProjects | where: 'featured',true %}
 <div id="project-list" class="container">
-  {% for project in showcaseProjects %}
+  {% for project in featuredProjects %}
   <div class="w-100">
     <div class="jumbotron featured-project fixed-bg-fill" style="background-image: url('{{ project.bannerFullUrl }}');">
       <h1 class="text-white">{{ project.title | escape }}</h1>

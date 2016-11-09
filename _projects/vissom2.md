@@ -25,5 +25,5 @@ navItems:
   external: true
 title: Visualize Somerville 2
 updated: '2016-06-10T22:59:49.000Z'
-showcase: true
+featured: true
 ---

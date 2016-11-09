@@ -19,5 +19,5 @@ summary:
   data: ''
   dataType: html
 blogCategories: []
-showcase: true
+featured: true
 ---

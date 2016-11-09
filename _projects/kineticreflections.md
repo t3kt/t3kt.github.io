@@ -48,5 +48,5 @@ summary:
 title: Kinect Reflections
 updated: '2014-10-11T19:36:03.000Z'
 vimeoAlbumId: '3080031'
-showcase: true
+featured: true
 ---
